@@ -16,5 +16,9 @@ func main() {
 
 	r.Get("/hello", h.Hello)
 
+	log.Print("starting server")
+
 	log.Fatal(http.ListenAndServe(":8081", r))
+
+	log.Print("shutting server down")
 }
